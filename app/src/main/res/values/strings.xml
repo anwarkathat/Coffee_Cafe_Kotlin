@@ -1,0 +1,15 @@
+<resources>
+
+<!--  Question One   -->
+    <string name="app_name">Kotlin CA </string>
+    <string name="microsoft_teams_text">Microsoft Teams</string>
+    <string name="get_started_text">Get started with your work, school or personal Microsoft account</string>
+    <string name="edit_text_hint">Enter email, phone or Skype</string>
+    <string name="signin_btn_text">Sign in</string>
+    <string name="get_help_text">Get help with signing in</string>
+    <string name="join_meet_text">Join a meeting</string>
+    <string name="signup_text">Sign up for free</string>
+
+<!--  Question Two  -->
+    <string name="heading_text">WELCOME TO Coffee Cafe</string>
+</resources>

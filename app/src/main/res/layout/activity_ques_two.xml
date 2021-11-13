@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_yellow"
+    android:padding="15dp"
+    tools:context="com.kotlinca.assignment.QuesTwo">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/heading_text"
+        android:textColor="@color/color_red"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/cafe_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/welcome_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/coffee">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_below="@+id/cafe_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU ITEMS : "
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#2E0916"
+        android:textSize="15dp"
+        >
+    </TextView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/menu_items"
+        android:layout_below="@+id/menu_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:backgroundTint="#FFAF39"
+        android:layout_marginTop="10dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#7A4900"
+        >
+        <LinearLayout
+            android:id="@+id/checkBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:padding="15dp"
+            >
+
+            <CheckBox android:id="@+id/checkbox_coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹50 /-   Hot Coffee"
+                />
+            <CheckBox android:id="@+id/checkbox_latte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹90 /-   Blonde Cafe Latte"
+                />
+            <CheckBox android:id="@+id/checkbox_cappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹100 /-   Cappuccino"
+                />
+            <CheckBox android:id="@+id/checkbox_iced_coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹70 /-   Iced Coffee"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Addon One Item free : "
+                android:layout_marginLeft="10dp"
+                >
+            </TextView>
+            <RadioGroup
+                android:id="@+id/radio_group"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_drink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cold Drink"
+                    />
+                <RadioButton android:id="@+id/radio_choco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choco Lava"
+                    />
+
+            </RadioGroup>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/not_mention_text"
+        android:layout_below="@+id/menu_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type (optional) Item"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        >
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/edit_text_item"
+        android:layout_below="@+id/not_mention_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:boxStrokeColor="@color/color_red"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/color_red">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="20dp"
+            android:hint="Type Here"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/order_btn"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/edit_text_item"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#CF054A"
+        android:padding="10sp"
+        android:text="Order Now"
+        app:cornerRadius="20dp" />
+
+
+</RelativeLayout>
